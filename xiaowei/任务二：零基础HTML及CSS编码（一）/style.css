@@ -164,13 +164,13 @@ table tr:last-child{
 }
 .message7 {
     margin-right: 5px;
+    margin-top:10px ;
 }
 .message7 textarea{
-    margin-top:10px ;
     margin-left: 10px;
     height: 80px;
     width: 180px;
-   
+    vertical-align: top;
 }
 .submit{
     padding:8px 13px;
