@@ -2,13 +2,11 @@
     padding: 20px;
     border: 1px solid #999;
     background: #eee;
-    position: relative;
     margin:20px;
+    position: relative;
 }
 .left-container{
-   position: absolute;
-   left:20px;
-   top:20px;
+   float: left;
    width:200px;
    padding: 20px 0 20px 20px;
    border: 1px solid #999;
@@ -30,15 +28,12 @@
     border:1px solid #999;
     padding: 20px;
     background: #fff;
-    
 }
 .introduce span{
     line-height: 40px;
 }
 .right-container{
-    position: absolute;
-   right:20px;
-   top:20px;
+    float:right;
     box-sizing: border-box;
     width:120px;
     border:1px solid #999;
@@ -53,4 +48,9 @@
 }
 .right-container :last-child{
     margin-bottom: 0;
+}
+.container:after{
+    content: "";
+    display: table;
+    clear: both;
 }
