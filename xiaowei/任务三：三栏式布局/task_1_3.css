@@ -3,10 +3,13 @@
     border: 1px solid #999;
     background: #eee;
     margin:20px;
-    position: relative;
+    /*position: relative;*/
 }
 .left-container{
-   float: left;
+    /* position: absolute;
+    left: 20px;
+    top: 20px;*/
+    float: left;
    width:200px;
    padding: 20px 0 20px 20px;
    border: 1px solid #999;
@@ -33,7 +36,10 @@
     line-height: 40px;
 }
 .right-container{
-    float:right;
+    /*position: absolute;
+    right: 20px;
+    top: 20px;*/
+    float: right;
     box-sizing: border-box;
     width:120px;
     border:1px solid #999;
@@ -49,8 +55,14 @@
 .right-container :last-child{
     margin-bottom: 0;
 }
-.container:after{
+/* 在contanier之后清除浮动，实现背景色为 #eee 区域的高度取决于三个子元素中最高的高度。清除浮动，就是使得元素不实现浮动效果，而是占用位置*/
+/*.container:after{
     content: "";
     display: table;
     clear: both;
+}*/
+.container{
+    zoom: 1;
+    overflow: auto;
 }
+/*可以试用 position:absolute ；top， left/right 来实现左右布局,但是右侧会出现滑动条*/
