@@ -65,7 +65,8 @@ p{
     margin-left: 10px;
 }
 .pic-img{
-    float: left;
+    /*float: left;*/
+    display: inline-block;
     width: 150px;
     height: 150px;
     border:1px solid #888;
@@ -75,11 +76,11 @@ p{
     text-align: center;
     font-size: 16px;
 }
- .pics:after{
+ /*.pics:after{
      content: '';
      display: table;
      clear: both;
- } /*清除图片浮动，使其保持在文档中*/
+ } 清除图片浮动，使其保持在文档中*/
 .img{
     width: 150px;
     height: 120px;
