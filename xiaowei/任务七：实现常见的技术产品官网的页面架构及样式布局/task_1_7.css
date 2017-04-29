@@ -43,14 +43,9 @@ body{
     background-image: url("1.png") ;
     background-repeat: no-repeat;
     background-size: 100% 690px;
-    position: relative;
 }
 .page-text{
-    position: absolute;
-    top: 50%;
-    transform:translateY(-50%) ;
-    padding:  0 100px;
-    /*padding: 220px 0 0 100px; 实现垂直居中*/
+    padding: 220px 0 0 100px;
 }
 .page-text span{
     font-size: 60px;
@@ -83,7 +78,7 @@ body{
    margin: 0 auto;
    /*position: relative;
    left: 50%;
-   margin-left: -640px; 水平居中*/
+   margin-left: -640px;*/
 }
 .icon{
     width: 300px;
@@ -130,7 +125,7 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 350px;
     text-align: center;
-    padding:40px 110px 0 110px ;
+    padding: 40 110px 0 110px;
 }
 .search-activities h1{
     font-size: 21px;
@@ -155,10 +150,9 @@ body{
     float: left;
     margin:50px 15px 0 15px;
     width: 210px;
-    height: 30px;
-    line-height: 30px;
+    height: 10px;
     background:#ffffff;
-    padding: 0 10px;
+    padding: 10px;
     text-align: left;
     position: relative;
 }
@@ -166,6 +160,7 @@ body{
     font-size: 12px;
     font-family: "MicroSoft Yahei";
     color: #a8aaaa;
+    line-height: 10px;
 }
 .input img{
     position: absolute;
@@ -184,7 +179,7 @@ body{
     font-family:"MicroSoft Yahei";
     color: #787878;
     line-height: 26px;
-   /*padding-left: 35px;*/
+    /*padding-left: 35px;*/
     border: 2px solid #be4e48;
     position: absolute;
     left: -2px;
@@ -200,9 +195,12 @@ body{
     top: 10px;
 }
 .input:last-child{
+    height: 30px;
+    padding: 0;
     background: #be4e48;
     font-size: 14px;
     font-family: "MicroSoft Yahei";
+    line-height: 30px;
     letter-spacing: 10;
     color: #ffffff;
     text-align: center;
@@ -211,20 +209,13 @@ body{
     width: 100%;
     height: 630px;
     background-color: #f8f7f7;
-    /*position: relative;*/
 }
 .activities-block{
     width: 1100px;
     height: 430px;
     margin: 0 auto;
-    padding: 100px 0;
     text-align: center;
-    /* 水平垂直居中
-    position: absolute;
-    left: 50%;
-    margin-left: -550px;
-    top: 50%;
-    margin-top: -215px;*/
+    padding: 100px 0;
 }
 .activity{
     float: left;
@@ -256,16 +247,16 @@ body{
     letter-spacing: 26;
 }
 .more-activities{
-    width: 100%;
+    min-width: 1280px;
     height: 1087px;  
 }
-.time-container{
+.time-text{
     width: 100%;
     height: 567px;
     position: relative;
 }
 .time-activity{
-    width: 66.6%;
+    width: 66%;
     height: 567px;
     background-image: url("time.png");
     background-repeat: no-repeat;
@@ -274,7 +265,7 @@ body{
     position: relative;
     display: inline-block;
 }
-.time-text{
+.time{
     height: 300px;
     width: 370px;
     position: absolute;
@@ -283,21 +274,21 @@ body{
     left: 50%;
     margin-left: -185px;
 }
-.time-text h2{
+.time h2{
     font-size: 50px;
     color: #ffffff;
     font-family:  "MicroSoft Yahei";
     line-height: 50px;
     font-weight: 300;
 }
-.time-text h1{
+.time h1{
     font-family: "MicroSoft Yahei";
     font-size: 158px;
     color: #ffffff;
     line-height: 130px;
     font-weight: 500;
 }
-.time-text p{
+.time p{
     font-size: 22px;
     font-family: "MicroSoft Yahei";
     color: #ffffff;
@@ -350,12 +341,11 @@ body{
     line-height: 30px;
     color: #e25d60;
 }
-.life-list1,.life-list2,.life-list3{
-    width: 33.3%;
+.life-list1,.life-list2{
+    width: 33%;
     height: 350px;
     display: inline-block;
     text-align: center;
-    float: left;/*不加的话三栏布局中间有个小的间隙*/
 }
 .life-list1{
    background: #e8504e;
@@ -379,10 +369,9 @@ body{
     border: 1px solid #ffffff;
     line-height: 40px;
     text-align: center;
-    margin: 0 auto;
-    /* position: relative;
+    position: relative;
     left: 50%;
-    margin-left: -85px;*/
+    margin-left: -85px;
 }
 .life-list2{
    font-size: 21px;
@@ -405,12 +394,13 @@ body{
     line-height: 40px;
     color: #e8504e;
     text-align: center;
-    margin: 0 auto;
-    /*position: relative;
+    position: relative;
     left: 50%;
-    margin-left: -85px;*/
+    margin-left: -85px;
 }
 .life-list3{
+    width: 33%;
+    float: right;
     height: 520px;
     background-image: url("life.png");
     background-repeat: no-repeat;
@@ -427,7 +417,7 @@ body{
 .joinUs{
    width: 1080px;
    height: 470px;
-   padding: 110px 0 160px 0;
+   padding: 110px 100px 160px;
    margin: 0 auto;
 }
 .join-text{
@@ -536,6 +526,7 @@ body{
 /*联系我们*/
 .callme{
     height: 280px;
+    clear: both;
     background: #33363f;
     text-align: center;
     font-size: 16px;
@@ -560,11 +551,11 @@ body{
     height: 40px;
     background: #6f7178;
     font-size: 16px;
-    line-height: 37px;
+    line-height: 36px;
     margin-left: -8px;
 }
 .callme img{
-    margin: 10px 20px;
+    margin: 10px;
 }
 /*页眉*/
 .footer{
@@ -576,7 +567,7 @@ body{
     margin-left: 90px;
     font-size: 12px;
     font-family: "SimSun";
-    line-height: 40px;
+     line-height: 40px;
     color: #ffffff;
     display: inline-block;
 }
@@ -587,6 +578,7 @@ body{
     font-family: "SimSun";
     line-height: 40px;
     color: #ffffff;
+   overflow: hidden;
 }
 .footer::after{
     content: '';
