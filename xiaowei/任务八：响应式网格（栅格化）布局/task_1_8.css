@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.grid-container{
+    width: 100%;
+    border: 1px solid #999;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.grid-container *{
+    box-sizing: border-box;
+}
+.row::before,.row::after{
+   content: '';
+   display: table;
+   clear: both;
+}
+
+.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-6 {
+        float: left; 
+        min-height: 1px; 
+        width: calc(8.33% - 20px); 
+        /*-- our gutter -- */
+        margin: 10px;
+        background-color: #eee;
+        height: 50px;
+        border: 1px solid #999;
+    }
+ @media all and (min-width:768px){
+     .col-md-1{ width: calc(8.33% - 20px); }
+     .col-md-2{ width: calc(16.66% - 20px); }
+     .col-md-3{ width: calc(25% - 20px);   }
+     .col-md-4{ width: calc(33.33% - 20px); }
+     .col-md-6{ width: calc(50% - 20px);   }
+    }
+ @media all and (max-width:768px){
+        .col-md-1{ width: calc(16.66% - 20px);     }
+        .col-md-2{ width: calc(66.66% - 20px); }
+        .col-md-3{ width: calc(25% - 20px);   }
+        .col-md-4{ width: calc(50% - 20px);    }
+        .col-md-6{ width: calc(50% - 20px);    }
+
+        .row .col-sm-2{
+            width: calc(25% - 20px);  
+        }
+        /*.row .col-md-2:last-of-type{
+            width: calc(25% - 20px); 
+        }失效？*/
+        .row .col-md-4:last-of-type{
+            width: calc(100% - 20px); 
+        }
+
+        .row .col-md-6:last-of-type{
+            width: calc(25% - 20px); 
+        }
+       
+   
+    }
